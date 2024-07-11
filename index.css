@@ -1,0 +1,158 @@
+
+
+/* take-2
+
+html, body
+#container
+#manuHolder
+.SectionButton
+
+ */
+
+ :root{
+    --very-black:  rgb(41, 35, 36);
+    --dark-black:  rgb(67, 58, 60);
+    
+ }
+
+ *{
+    font-family: monospace;
+ }
+
+html, body{
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-left: 2vw;
+
+}
+
+
+#manuHolder{
+
+    transition: all 500ms;
+    height: 90vh;
+    width: 20vw;
+    background-color: rgb(189, 132, 186);
+
+    border: 2px solid var(--dark-black);
+    border-radius: 4vh;
+
+    padding: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1vh;
+}
+
+.SectionButton{
+
+    transition: all 400ms;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+    height: 10vh;
+
+    background-color: rgb(143, 101, 181);
+    border: 3px solid var(--dark-black);
+    border-radius: 2vh;
+    gap: 1vh;
+
+    margin: 0 auto;
+
+}
+.SectionButton:hover{
+    background-color: skyblue;
+    cursor: pointer;
+}
+.SectionButtonWide{
+    transition: all 400ms; 
+    width: 12cm;
+    align-items:start;
+    justify-content:right;
+    padding: 1vh;
+
+    box-shadow: 1vh 2vh 4vh;
+
+}
+.SectionButtonWide:hover{
+    transition: all 700ms;
+    background-color: rgb(127, 221, 255);
+    cursor: context-menu;
+}
+
+.subSection{
+
+    transition: all 300ms;
+
+    height:80%;
+    width: 20vw;
+    background-color: beige;
+
+    border: 2px solid var(--very-black);
+    border-radius: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-content: center;
+    text-align: center;
+    margin: auto 0;
+    padding: 1vh;
+}
+.subSection:hover{
+    background-color: rgb(190, 248, 183);
+    cursor: pointer;
+}
+.subSectionExpend{
+    transition: all 400ms;
+    height: 60vh;
+
+    align-items: center;
+    justify-content: space-around;
+
+    box-shadow: 1vh 4vh 4vh;
+}
+
+.listItem{
+
+    transition: all 300ms;
+
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(242, 126, 126, 0.5);
+    text-align: center;
+
+    border: 1px solid var(--very-black);
+    border-radius: 12px;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.listItem:hover{
+    transition: all 300ms;
+    background-color: skyblue;
+}
