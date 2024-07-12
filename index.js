@@ -1,22 +1,39 @@
 
 const container = document.getElementById('container');
 
+// const coverScreen = document.createElement('div');
+// coverScreen.id ='coverScreen'
+// container.appendChild(coverScreen);
+// coverScreen.addEventListener('click', ()=>{
+//     runPassword()
+// })
+// function runPassword(){
+//     const input = document.createElement('input');
+//     coverScreen.appendChild(input)
+// }
+
+run()
+
+function run(){
+    container.innerHTML = ''
+    const manuHolder = document.createElement('div');
+    manuHolder.id = 'manuHolder';
+
+    container.appendChild(manuHolder)
+
+    const buttonA = buildSectionButton('Headlines', firstList)
+    const buttonB = buildSectionButton('Cancellation', secoundList)
+    const buttonC = buildSectionButton('quick notes', theirdList)
+    const buttonD = buildSpcialSectionButton('text-builder')
+    const buttonE = buildSectionButton('hallo! 5')
+
+}
+
+
 //container.style.backgroundColor = 'blue'
 
-const manuHolder = document.createElement('div');
-manuHolder.id = 'manuHolder';
 
-container.appendChild(manuHolder)
-
-const buttonA = buildSectionButton('Headlines', firstList)
-const buttonB = buildSectionButton('Cancellation', secoundList)
-const buttonC = buildSectionButton('quick notes', theirdList)
-const buttonD = buildSpcialSectionButton('text-builder')
-const buttonE = buildSectionButton('hallo! 5')
-
-
-
-function buildSectionButton(name, list){
+function buildSectionButton(name, list, align){
 
     const button = document.createElement('div');
     button.classList.add('SectionButton');
@@ -90,28 +107,48 @@ function buildSpcialSectionButton(name){
     button.innerText = name;
     button.id = name;
     button.addEventListener('mouseenter', ()=>{
-        button.innerHTML = ''
-        button.classList.add('SectionButtonWide')
-        addSpcialSubSections(name);
+        button.innerHTML = '';
+        button.classList.add('SectionButtonWide');
+        addSpcialSubSections(name, forthList);
     })
     button.addEventListener('mouseleave', ()=>{
-        button.classList.remove('SectionButtonWide')
+        button.classList.remove('SectionButtonWide');
         button.innerHTML = name;
     })
-    manuHolder.appendChild(button)
+    manuHolder.appendChild(button);
 
     const sentence = '';
-
-    
 
     const lateButton = document.createElement('div');
 
 
 }
 function addSpcialSubSections(name, list){
-    const button = document.getElementById(name);
-    const secoundLineList = document.createElement('div');
-    secoundLineList.classList.add('subSection');
-    button.appendChild(secoundLineList); 
+    
+    const section = document.getElementById(name);
+    section.innerHTML = '';
+
+    for(let i=0; i<list.length; i++){
+        const subSection = document.createElement('div');
+        const subSubSectionID = `ss${name}${i}`
+        subSection.id = subSubSectionID;
+
+        const subSectionTitle = list[i][0];
+        subSection.innerText = subSectionTitle;
+
+        subSection.classList.add('subSection');
+        section.appendChild(subSection);
+
+        subSection.addEventListener('mouseenter', ()=>{
+            subSection.classList.add('subSectionExpend');
+            createListItem(list, i, subSubSectionID, subSectionTitle)
+        })
+        subSection.addEventListener('mouseleave', ()=>{
+            subSection.classList.remove('subSectionExpend');
+            subSection.innerHTML = '';
+            subSection.innerText = subSectionTitle
+        })
+    
+    }
 
 }

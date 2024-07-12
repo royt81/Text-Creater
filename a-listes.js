@@ -112,11 +112,16 @@ V: KD verlangt nach SoKü von AV, Vertrag bei uns widerrufen und ein neuer Vertr
 
 const firstLine = 'Hallo {%customer.firstName,fallback=%},';
 
-const secoundLineEmail = 'Vielen Dank für deine Anfrage.'; 
-const secoundLinePhone = 'Vielen Dank für das nette Gespräch.';
-const secoundLineFA = 'ich habe eine Rückantwort aus der Fachabteilung erhalten.';
+// const secoundLineEmail = 'Vielen Dank für deine Anfrage.'; 
+// const secoundLinePhone = 'Vielen Dank für das nette Gespräch.';
+// const secoundLineFA = 'ich habe eine Rückantwort aus der Fachabteilung erhalten.';
 
-
+const secoundLine = [
+    ['second line'],
+    ['email', 'Vielen Dank für deine Anfrage.'],
+    ['phone', 'Vielen Dank für das nette Gespräch.'],
+    ['fachabt.', 'ich habe eine Rückantwort aus der Fachabteilung erhalten.']
+]
 
 
 
@@ -133,4 +138,8 @@ const secoundList = [
 
 const theirdList = [
     quickTelNotes
+]
+
+const forthList =[
+    secoundLine
 ]
