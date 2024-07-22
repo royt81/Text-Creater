@@ -34,12 +34,12 @@ const beNice = [
     ['be nice!', '30vh'],
     ['call us!',`Gerne kannst du uns bei weiteren Fragen telefonisch kontaktieren.
 Wir sind von Mo - Fr zwischen 9:00 und 17:00 Uhr unter 040 593622030 erreichbar.`],
-    ['-4,99',`Als kleines Dankeschön werden wir deine Seriengebühr für den Monat XXX in Höhe von 4,99 € erlassen.`],
+    ['-4,99',`Als kleines Dankeschön werden wir deine Servicegebühr für den Monat XXX in Höhe von 4,99 € erlassen.`],
     ['feedback',`Wir würden uns sehr freuen, wenn du uns eine Bewertung hinterlassen würdest. 
 Hier ist der Link daz: https://de.trustpilot.com/review/rabot-charge.de.
 Dein Feedback ist uns wichtig!`],
-    ['Code', `Mit der Bewerbungscode CWZBIYS erhaltest du bei Anmeldung eine 50 € Gutschrift von uns.`],
-
+    ['Code', `Mit dem Empfehlungscode CWZBIYS bekommst du 50 € Gutschrift für jeden Vertrag, den du über unsere Webseite unterschreibst.`],
+    ['freut mich!', `Das freut mich zu hören. Wenn du noch weitere Fragen hast, zögere bitte nicht, uns zu kontaktieren.`]
 ]
 const headlines = [
     ['Headlines', '60vh'],
@@ -89,22 +89,29 @@ Ich wünsche dir einen schönen Tag`
 const quickNeed = [
     ['need', '60vh'],
     ['JV', `Bitte teile mir deinen neuen, gewünschten Jahresverbrauch mit. Ich werde ihn im System aktualisieren.`],
-    ['pay Rc', `Bitte überweise die Rechnungsnummer XXX auf die folgende IBAN mit dem folgenden Verwendungszweck.`],
-    ['ZS', `Bitte teile mir deinen aktuellen Zählerstand mit.`],
+    ['pay bill', `Bitte überweise die Rechnungsnummer XXX auf die folgende IBAN mit dem folgenden Verwendungszweck.`],
+    ['ZS', `Gerne kannst du mir deinen Zählerstand als Antwort auf diese E-Mail mitteilen.`],
     ['IBAN', 'Bitte teile mir deine neue IBAN mit.'],
     ['ZF', `Kannst du uns bitte ein Bild von deinem Zähler schicken?`],
+    ['ZF & ÜP', `Bitte teile mir ein Bild deines Zählers und eine Kopie des Übergabeprotokolls mit.`],
     ['Kontoausz.', `Bitte teile mir die Kontoauszüge für den XXXX und XXXX Abschläge.`],
-    ['email', `Bitte teile mir deine neue gewünschte E-Mail-Adresse mit.`],
+    ['email', `Wenn du deine E-Mail-Adresse bei uns ändern möchtest, teile mir bitte die neue gewünschte E-Mail-Adresse mit.`],
+    ['bestätige Kü.', `Bitte bestätige mir, dass du deinen Vertrag bei uns zum XX.XX.2024 kündigen möchtest.`],
+    ['IBAN z. SEPA', `Falls du dein SEPA-Mandat bei uns aktivieren möchtest, kannst du mir gerne deine IBAN mitteilen.`],
 
 ]
 const quickGot = [
     ['got', '40vh'],
+    ['Rechnungsadresse', `Ich habe deine Rechnungsadresse bei uns aktualisiert.`],
+    ['info FA', `Ich habe diese Informationen von dir an meine Fachabteilung weitergeleitet. Sobald ich eine Rückmeldung erhalte, melde ich mich zeitnah bei dir.`],
     ['info MP', `Ich habe diese Information an unseren Marktpartner weitergeleitet. Sobald ich Rückantwort habe, melde ich mich zeitnah bei dir.`],
     ['ZS', `Ich habe die von dir angegebenen Zählerstände an unseren Marktpartner weitergeleitet.`],
+
     
 ]
 const quickTelNotes = [
     ['quick notes', '40vh'],
+    ['NKD', `NKD wollte Informationen über unseren Tarif und den Wechsel zu uns haben.`],
     ['Kollegen besprochen', 'G: Das Thema wurde bereits mit eiem Kollegen besprochen'],
     ['WP Status', 'G: KD rief an, um den Status seiner WP zu erfahren'],
     ['Früher anfangen', `G: KD wollte früher bei uns anfangen.
@@ -140,8 +147,9 @@ const want = [
 ]
 const otherEmailRelated = [
     ['other', '30vh'],
-    ['late', 'sorry i am late'],
-    ['recommend', 'say nice stuff about me!'],
+    ['neue WP', `Ich habe eine neue Anmeldung für dich gestartet und hoffe, dass es nun klappen wird.
+Sobald dein Netzbetreiber unsere Anmeldung bestätigt hat, schicken wir dir deinen Stromliefervertrag. Von deiner Seite besteht aktuell kein weiterer Handlungsbedarf.`],
+    
     
 ]
 
@@ -153,7 +161,7 @@ const firstList = [
 ]
 
 const secoundList = [
-    cancellation, beNice
+    cancellation, beNice, otherEmailRelated
 ]
 
 const theirdList = [
